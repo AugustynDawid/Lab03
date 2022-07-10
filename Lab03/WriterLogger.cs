@@ -13,8 +13,13 @@ namespace Lab03
 
             public virtual void Log(params string[] messages)
             {
-                // Uzupełnić to miejsce o logikę zapisu opartą o TextWriter ...
+
+            foreach (string message in messages)
+            {
+                writer.Write(message + System.Environment.NewLine);
+                writer.Flush();
             }
+        }
 
             public abstract void Dispose();
         }
